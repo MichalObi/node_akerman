@@ -1,0 +1,15 @@
+{
+  "name": "node_akerman",
+  "version": "0.0.0",
+  "description": "Akerman fn implementation in js",
+  "main": "akerman.js",
+  "scripts": {
+    "akerman": "node akerman.js akerman"
+  },
+  "author": "M.Obielecki",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "make-runnable": "~1.3.6",
+    "object-assign": "~4.1.1"
+  }
+}
