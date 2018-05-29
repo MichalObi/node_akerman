@@ -4,12 +4,17 @@ if (!Object.assign) {
 
 module.exports.akerman = function () {
 
-  var m, n;
+  // default values
+  var m = 4, n = 2;
 
   function checkUserInput() {
     var userInput = process.env.npm_config_input;
-        m = parseInt(userInput.split(',')[0]);
-        n = parseInt(userInput.split(',')[1]);
+
+    if (userInput) {
+      m = parseInt(userInput.split(',')[0]);
+      n = parseInt(userInput.split(',')[1]);
+    }
+
 
     function isInputExist() {
       return m && n;
@@ -47,6 +52,7 @@ module.exports.akerman = function () {
   }
 
   return checkUserInput() ? akerman(m, n) : logError();
+
 }
 
 require('make-runnable');
